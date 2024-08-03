@@ -20,7 +20,7 @@ header{
     background-color: rgba(23,23,23,0.15);
     color: white;
     position: fixed;
-    padding: 20px 10%;
+    padding: 20px 12%;
     
 
     display: flex;
@@ -33,7 +33,7 @@ header{
 
 a{
     text-decoration: none;
-    color: white;
+    color: rgb(238, 238, 238);
     font-size: 18px;
     font-weight: 500;
     padding: 20px;
@@ -57,7 +57,7 @@ header nav ul li{
 }
 
 a:hover{
-    color: #f49e08;
+    color: #e7b050;
 }
 
 .emb-list{
@@ -66,10 +66,10 @@ a:hover{
     top: 42px;
     width: 200px;
 
-    padding: 10px;
+    padding: 50x, 10px, 50px, 0;
     background-color: rgba(23,23,23,0.25);
 
-    border-radius: 10px;
+    border-radius: 15px;
 
     display: none; 
 
@@ -82,5 +82,65 @@ a:hover{
 
 nav ul li:hover > ul{
     display: block;
+}
+
+#menu-bar{
+    display: none; 
+}
+
+header label{
+    font-size: 20px;
+    color: rgb(238, 238, 238);
+    cursor: pointer; 
+    display: none;
+}
+
+/*RWD*/
+
+@media(width < 1080px){
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+    }
+
+    header nav ul{
+        display: block;
+        width: 100%;
+        padding-left: 25px;
+        margin: 20px 0;
+        padding-bottom: 5px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav ul li{
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .emb-list{
+        position: relative;
+        display: none;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        top: 0;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ nav{
+        display: initial;
+    }
 }
 
